@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num = input.nextInt();
+        int sumEven = 0;
+        int sumOdd = 0;
+
+        while(num > 0) {
+            int dig = num % 10;
+            if(num%2 == 0){
+                sumEven = sumEven + dig;
+            }else{
+                sumOdd = sumOdd + dig;
+            }
+            num /= 10;
+        }
+        System.out.println(sumEven+" "+sumOdd);
+    }
+}
